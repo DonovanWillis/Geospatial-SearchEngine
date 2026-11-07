@@ -7,3 +7,11 @@
 **Why:** Donovan's MCP server currently follows the playbook's draft tool list and uses provisional schemas and a provisional `/{tool_name}` POST route. It needs the engine contract before live MCP work can be safely wired in Phase 2.
 
 **Workaround meanwhile:** Use local fixtures in `GROUNDTRUTH_MOCK=1` mode. No live API request is made during the smoke test.
+
+## 2026-11-07 14:57 ET — Define compare-years operation
+
+**What:** Please specify whether the engine will expose a compare-years tool, its inputs, and its versioned envelope.
+
+**Why:** The map agent's five-intent planner includes year comparison, but the draft tool list has no compare-years operation. The agent currently reports this intent as unsupported.
+
+**Workaround meanwhile:** The agent handles the other four mock demo requests and gives a clear error for compare-years requests.
